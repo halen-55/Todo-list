@@ -97,7 +97,7 @@ const themes = {
 
     return acc;
   }, {});
-  let lastSelectedTheme = localStorage.getItem("app_theme" || "default");
+  let lastSelectedTheme = localStorage.getItem("app_theme") || "default";
 
   // Elements UI(user interface) то что видит и с чем взаимодействует пользователь
   const listContainer = document.querySelector(
@@ -108,9 +108,9 @@ const themes = {
   const inputBody = form.elements["body"];
   const themeSelect = document.getElementById("themeSelect");
 
-  if (lastSelectedTheme == null) {
-    lastSelectedTheme = 'default';
-  };
+  // if (lastSelectedTheme == null) {
+  //   lastSelectedTheme = 'default';
+  // };
 
   // Events обработчики событий
   setTheme(lastSelectedTheme);
